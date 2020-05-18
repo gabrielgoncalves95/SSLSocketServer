@@ -18,18 +18,16 @@ public class TCPServer {
 
     final TCPServerConfig tcpServerConfig;
 
-    final String KEY_STORE_PASSWORD = "Password";
-
     @Autowired
     public TCPServer(TCPServerConfig tcpServerConfig) {
         this.tcpServerConfig = tcpServerConfig;
 
         try {
             KeyStore keyStore = KeyStore.getInstance("JKS");
-            keyStore.load(loadCertificate().getInputStream(), KEY_STORE_PASSWORD.toCharArray());
+            keyStore.load(loadCertificate().getInputStream(), tcpServerConfig.getServerSecurityKsPassword().toCharArray());
 
             KeyManagerFactory kmf = KeyManagerFactory.getInstance("SunX509");
-            kmf.init(keyStore, KEY_STORE_PASSWORD.toCharArray());
+            kmf.init(keyStore, tcpServerConfig.getServerSecurityKsPassword().toCharArray());
 
             TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance("SunX509");
             trustManagerFactory.init(keyStore);

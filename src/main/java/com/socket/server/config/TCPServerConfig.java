@@ -21,4 +21,7 @@ public class TCPServerConfig {
 
     @Value("${TCPSocket.security.certFile}")
     private String serverSecurityCertFile;
+
+    @Value("${TCPSocket.security.ksPassword}")
+    private String serverSecurityKsPassword;
 }

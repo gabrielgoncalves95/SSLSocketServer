@@ -5,3 +5,4 @@ TCPSocket:
     queue: 20
   security:
     certFile: cert/certTest.jks
+    ksPassword: password
