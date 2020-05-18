@@ -1,0 +1,7 @@
+TCPSocket:
+  server:
+    host: 0.0.0.0
+    port: 6565
+    queue: 20
+  security:
+    certFile: cert/certTest.jks
