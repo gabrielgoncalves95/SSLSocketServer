@@ -4,4 +4,4 @@ TCPSocket:
     port: 6565
     queue: 20
   security:
-    certFile: cert/certTest.jks
+    certFile: cert/cert.jks

@@ -1,4 +1,4 @@
-package com.socket.test.config;
+package com.socket.server.config;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

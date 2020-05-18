@@ -1,7 +1,7 @@
-package com.socket.test.init;
+package com.socket.server.init;
 
-import com.socket.test.config.TCPServerConfig;
-import com.socket.test.socket.TCPServer;
+import com.socket.server.config.TCPServerConfig;
+import com.socket.server.socket.TCPServer;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
