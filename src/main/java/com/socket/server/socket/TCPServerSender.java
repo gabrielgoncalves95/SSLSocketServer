@@ -2,7 +2,6 @@ package com.socket.server.socket;
 
 import lombok.extern.slf4j.Slf4j;
 
-import javax.net.ssl.SSLSocket;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -12,11 +11,11 @@ import java.nio.charset.StandardCharsets;
 @Slf4j
 public class TCPServerSender extends Thread {
 
-    private final SSLSocket socket;
+    private Socket socket;
     private DataOutputStream dataOutputStream;
     private DataInputStream dataInputStream;
 
-    public TCPServerSender(SSLSocket socket) {
+    public TCPServerSender(Socket socket) {
         this.socket = socket;
     }
 

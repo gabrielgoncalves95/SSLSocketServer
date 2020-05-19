@@ -45,10 +45,9 @@ public class TCPServer {
 
             try {
                 while (true) {
-                    SSLSocket sslSocket = (SSLSocket) sslListener.accept();
-                    sslSocket.setEnabledCipherSuites(sslSocket.getSupportedCipherSuites());
+                    Socket socket = sslListener.accept();
                     log.info("New Client Connected");
-                    new TCPServerSender(sslSocket).start();
+                    new TCPServerSender(socket).start();
                 }
 
             } catch (IOException ex) {
